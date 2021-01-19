@@ -21,8 +21,8 @@ jobs:
         cp -r source/_build/* gh-pages/
         cd gh-pages
         touch .nojekyll
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
+        git config --local user.email "geotux_tuxman@linuxmail.org"
+        git config --local user.name "gacarrillor"
         git add .
         git commit -m "Update documentation" -a || true
         # The above command will fail if no changes were present, so we ignore
@@ -44,6 +44,6 @@ jobs:
         source-directory: 'gh-pages'
         destination-github-username: 'gacarrillor'
         destination-repository-name: 'test-public-sphinx-docs'
-        user-email: gcarrillo@linuxmail..org
+        user-email: geotux_tuxman@linuxmail.org
         target-branch: gh-pages
         commit-message: 'Automatic deploy from commit in docs repo'
