@@ -28,22 +28,22 @@ jobs:
         # The above command will fail if no changes were present, so we ignore
         # that.
         
-    #- name: Push changes
-    #  uses: ad-m/github-push-action@master
-    #  with:
-    #    branch: gh-pages
-    #    directory: gh-pages
-    #    github_token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        branch: gh-pages
+        directory: gh-pages
+        github_token: ${{ secrets.GITHUB_TOKEN }}
     #    repository: 'gacarrillor/test-public-sphinx-docs'
 
-    - name: Pushes to deploy repository
-      uses: cpina/github-action-push-to-another-repository@master
-      env:
-        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
-      with:
-        source-directory: 'gh-pages'
-        destination-github-username: 'gacarrillor'
-        destination-repository-name: 'test-public-sphinx-docs'
-        user-email: geotux_tuxman@linuxmail.org
-        target-branch: gh-pages
-        commit-message: 'Automatic deploy from commit in docs repo'
+    #- name: Pushes to deploy repository
+    #  uses: cpina/github-action-push-to-another-repository@master
+    #  env:
+    #    API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+    #  with:
+    #    source-directory: 'gh-pages'
+    #    destination-github-username: 'gacarrillor'
+    #    destination-repository-name: 'test-public-sphinx-docs'
+    #    user-email: geotux_tuxman@linuxmail.org
+    #    target-branch: gh-pages
+    #    commit-message: 'Automatic deploy from commit in docs repo'
