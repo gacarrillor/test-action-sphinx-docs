@@ -18,8 +18,8 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Asistente LADM-COL'
-copyright = '2020, Agencia de implementación'
-author = 'Agencia de implementación'
+#copyright = '2020, SwissTierras Colombia'
+author = 'SwissTierras Colombia'
 
 
 # -- General configuration ---------------------------------------------------
