@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Asistente LADM-COL'
-#copyright = '2020, SwissTierras Colombia'
+copyright = '2017-ahora, SwissTierras Colombia'
 author = 'SwissTierras Colombia'
 
 
