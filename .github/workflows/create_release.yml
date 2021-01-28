@@ -1,4 +1,4 @@
-name: Upload Release Asset
+name: Create release on tag
 on:
   push:
     tags:
@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    name: Upload Release Asset
+    name: Build and create release
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
