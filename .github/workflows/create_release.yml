@@ -17,8 +17,8 @@ jobs:
           build-command: "sphinx-build -b html . _build"
           docs-folder: "source/"
       - name: Build project
-        run: |
-          zip -r Asistente-LADM-COL-docs.zip source/_build
+        run: |         
+          cd source/_build/;zip -r Asistente-LADM-COL-docs .;cd ../../;mv source/_build/Asistente-LADM-COL-docs.zip .
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
