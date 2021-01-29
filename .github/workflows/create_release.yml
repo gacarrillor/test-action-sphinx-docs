@@ -11,9 +11,14 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+      - name: Build Sphinx docs
+        uses: ammaraskar/sphinx-action@master
+        with:
+          build-command: "sphinx-build -b html . _build"
+          docs-folder: "source/"
       - name: Build project
         run: |
-          zip -r Asistente-LADM-COL-docs.zip source
+          zip -r Asistente-LADM-COL-docs.zip _build
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
