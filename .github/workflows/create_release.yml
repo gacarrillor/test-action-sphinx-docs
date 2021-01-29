@@ -18,7 +18,7 @@ jobs:
           docs-folder: "source/"
       - name: Build project
         run: |         
-          cd source/_build/;zip -r Asistente-LADM-COL-docs .;cd ../../;mv source/_build/Asistente-LADM-COL-docs.zip .
+          cd source/_build/;zip -r Asistente-LADM-COL-docs .
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
@@ -36,6 +36,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./Asistente-LADM-COL-docs.zip
+          asset_path: source/_build/Asistente-LADM-COL-docs.zip
           asset_name: Asistente-LADM-COL-docs.zip
           asset_content_type: application/zip
