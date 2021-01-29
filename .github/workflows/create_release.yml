@@ -18,7 +18,7 @@ jobs:
           docs-folder: "source/"
       - name: Build project
         run: |
-          zip -r Asistente-LADM-COL-docs.zip _build
+          zip -r Asistente-LADM-COL-docs.zip source/_build
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
